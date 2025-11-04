@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/tutano-cc");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-logo: "Tutano cc v2", "Tutano CC v2", cursive;
+  --color-primary: 358 100% 67%;
+  --color-accent: var(--color-primary);
+  --color-secondary: 24 100% 92%;
+  --color-surface: 0 0% 100%;
+  --color-background: 32 56% 96%;
+  --color-neutral: 215 26% 17%;
+  --radius-xs: 0.5rem;
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 1.75rem;
+  --shadow-soft: 0 18px 40px -24px hsl(var(--color-neutral) / 0.35);
+  --shadow-ring: 0 0 0 1px hsl(var(--color-primary) / 0.15);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-ui);
+    background-color: hsl(var(--color-background));
+    color: hsl(var(--color-neutral));
+  }
+
+  body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, hsl(var(--color-secondary)) 0%, transparent 55%) hsl(var(--color-background));
+    margin: 0;
+  }
+
+  *, *::before, *::after {
+    border-color: hsl(var(--color-neutral) / 0.08);
+  }
+}
